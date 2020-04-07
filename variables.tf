@@ -74,6 +74,12 @@ variable "task_memory" {
   default     = null
 }
 
+variable "task_ignore_changes" {
+  type        = bool
+  description = "Ignore changes (like environment variables) to the ECS task definition"
+  default     = true
+}
+
 variable "ulimits" {
   type = list(object({
     name      = string
